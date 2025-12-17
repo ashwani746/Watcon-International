@@ -1,0 +1,180 @@
+/* --- Background and Overall Layout --- */
+.main-footer {
+  /* Set the background image and dark overlay */
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.4), /* Dark Overlay */
+      rgba(0, 0, 0, 0.4)
+    ),
+    url('path/to/your/background-image.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center bottom; /* Focus on the pool/water edge */
+  padding-top: 200px; /* Space for the floating CTA banner */
+  color: #fff;
+  position: relative;
+  /* Adjust min-height as needed to ensure the image covers the section */
+  min-height: 450px; 
+}
+
+/* --- Content Wrapper (to separate from CTA) --- */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Align logo and newsletter/branding at the bottom */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* --- CTA Banner Styling (The large blue box) --- */
+.cta-banner {
+  background-color: #5579a0; /* Use a color close to the image's blue */
+  width: 90%;
+  max-width: 1000px;
+  position: absolute; /* Allows it to float above the footer */
+  top: -150px; /* Adjust this value to control how much it floats above */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cta-subheading {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 5px;
+}
+
+.cta-heading {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.contact-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* --- Left Side: Logo/Monogram --- */
+.logo-monogram {
+  font-size: 80px;
+  font-weight: bold;
+  color: #fff; /* White color */
+  /* The logo looks like a specific font or SVG, using a large 'N' for now */
+  font-family: sans-serif; 
+}
+
+/* --- Right Side: Newsletter and Branding --- */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align text to the right */
+  text-align: right;
+}
+
+.newsletter-section {
+  margin-bottom: 20px;
+}
+
+.newsletter-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.newsletter-subtext {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+}
+
+.email-input {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px; /* Adjust width as needed */
+}
+
+.subscribe-button {
+  background-color: #5579a0; /* A complimentary blue/gray color */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+  background-color: #4a6c8e;
+}
+
+.branding-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: #5579a0; /* The text is a dark blue on the dark background */
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+/* --- Responsive Adjustments (for smaller screens) --- */
+@media (max-width: 768px) {
+  .cta-banner {
+    flex-direction: column;
+    padding: 30px 20px;
+    top: -100px;
+  }
+
+  .cta-content {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  .footer-left {
+    margin-bottom: 30px;
+  }
+  
+  .footer-right {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .subscribe-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .email-input, .subscribe-button {
+    width: 100%;
+  }
+}
