@@ -13,21 +13,21 @@ const Home = () => {
   const products1 = [
     {
       image:
-        "https://media.istockphoto.com/id/1550110756/photo/luxury-patio-with-a-pool-at-night.jpg?s=612x612&w=0&k=20&c=vy3McsRjNNmW_cKhZPF1mM0scSn3cPS-1jhs_x3pJ2w=",
+        "https://aqua-me.ae/wp-content/uploads/2024/02/08-VARIABLE-SPEED-PUMP-VSD-MAGNUS_IMAGE.jpg",
       title: "NN-FC-TMIX SERIES Filtration Combo",
       description:
         "Designed for easy setup of domestic pools, the NN-FC-TMIX SERIES Filtration Combo offers the ideal solution for home users seeking user-friendly operation and excellent filtration performance.",
     },
     {
       image:
-        "https://media.istockphoto.com/id/1452855533/photo/a-luxury-swimming-pool-with-lighting-in-night.jpg?s=612x612&w=0&k=20&c=AxNHN_vt_hjEoAfrIBxCe7xQn9iyiBldS_tHdgzRWOs=",
+        "https://aqua-me.ae/wp-content/uploads/2024/02/08-VARIABLE-SPEED-PUMP-VSD-MAGNUS_IMAGE.jpg",
       title: "NN-VSP-PP Variable-Speed Pumps",
       description:
         "NN-VSP-PP variable-speed pumps continuously adjust their water flow to match real-time system demand. This intelligent modulation not only optimizes energy use but also enhances the overall efficiency of plant operations.",
     },
     {
       image:
-        "https://media.istockphoto.com/id/1204560807/photo/led-light-application-for-swimming-pool-underwater-lighting.jpg?s=612x612&w=0&k=20&c=vAXvVUS-9tsR5O_seQwruJjZeBIwik6xMsodZZAZt1Y=",
+        "https://www.starpumpalliance.com/wp-content/uploads/2023/10/EDUR_Single-Stage-Close-Coupled-Pump_NUBS700M.jpg",
       title: "Radial Flow Gas Pump",
       description:
         "The Radial Flow Gas Pump is a high-performance air-moving solution, also known as a ring blower, designed to deliver consistent high-pressure airflow for demanding industrial applications.",
@@ -185,7 +185,7 @@ const Home = () => {
                 <div className="col-span-1 h-48 sm:h-64">
                   <div className="bg-gray-800 flex items-center justify-center rounded-sm h-full overflow-hidden shadow-md">
                     <img
-                      src="https://media.istockphoto.com/id/1151832961/photo/evening-view-of-a-modern-large-house-with-swimming-pool.jpg?s=612x612&w=0&k=20&c=1CP0id1zUGmhmAooj03ocSBipihju7CjCmmGs_LPwhA="
+                      src="https://media.istockphoto.com/id/1889324769/photo/summer-outdoor-pool-with-lighting-at-night.jpg?s=612x612&w=0&k=20&c=JGnBL-DoQy_679TyR9D0VbfMcpDWH-YKBAVV9gd1Glg="
                       alt="Product Catalogue Cover - Modern House"
                       className="w-full h-full object-cover"
                     />
