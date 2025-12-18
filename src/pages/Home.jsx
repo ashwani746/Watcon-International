@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const products = [
@@ -66,11 +67,24 @@ const Home = () => {
 
         {/* Hero Content */}
         <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-8 pt-20 pb-32">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center mb-6 leading-tight">
+          <motion.h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center mb-6 leading-tight">
             Engineering the Future of
             <br />
-            Aquatic Infrastructure
-          </h1>
+            <motion.span
+              animate={{
+                color: ["#ffffff", "#60a5fa", "#ffffff"], // Shimmers from white to blue back to white
+                scale: [1, 1.02, 1],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="inline-block"
+            >
+              Aquatic Infrastructure
+            </motion.span>
+          </motion.h1>
 
           <p className="text-white/90 text-center max-w-4xl text-lg md:text-xl mb-12 leading-relaxed">
             From Olympic-sized pools to wellness retreats, Noble Nautica
@@ -110,7 +124,7 @@ const Home = () => {
         {/* Cream colored section at bottom */}
         <div className="h-32 bg-[#f5f1e8]"></div>
       </div>
-      
+
       <h1 class="text-center text-3xl font-bold text-blue-700 p-4 bg-amber-50 ">
         Trusted leader in pool equipment and technology solutions
       </h1>
@@ -140,7 +154,9 @@ const Home = () => {
         </div>
       </section>
       <div class="text-center bg-amber-50">
-        <button class="bg-blue-500 text-white p-2 rounded bg-amber-50 ">Expore our Product </button>
+        <button class="bg-blue-500 text-white p-2 rounded bg-amber-50 ">
+          Expore our Product{" "}
+        </button>
       </div>
 
       <section className="bg-amber-50 py-12 px-4 md:py-24 md:px-8 font-sans">
@@ -160,7 +176,7 @@ const Home = () => {
                 Download Now
               </button>
             </div>
-{/* PRODUCT CATALOGUE Cover */}
+            {/* PRODUCT CATALOGUE Cover */}
             <div className="lg:w-1/2 bg-gray-200 p-4 rounded-lg shadow-lg">
               <div className="grid grid-cols-2 gap-4 h-full">
                 <div className="col-span-1 h-48 sm:h-64">
@@ -198,130 +214,160 @@ const Home = () => {
         </div>
       </section>
 
-<section className="bg-amber-50 py-12 px-4 md:py-24 md:px-8 font-sans">
-  <div className="max-w-7xl mx-auto">
-    <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
-      
-      <div className="lg:w-1/2 flex flex-col justify-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-800 leading-tight">
-          Crafting the Future of Water Spaces
-        </h1>
-        <p className="text-base text-gray-700 mb-10 max-w-xl leading-relaxed">
-          We're enabling a new era of swimming pool infrastructure - where design 
-          meets technology, and every solution is as functional as it is visually 
-          transparent. Our digital catalogue brings this vision to life: design-driven 
-          layouts, technically advanced details and crystal-clear product presentation. 
-          From precision specifications to stunning visuals, it's everything you need to 
-          build with confidence, all in one place.
-        </p>
-        <button 
-          className="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-6 rounded shadow-lg transition duration-300 w-fit"
-        >
-          Learn More About Us
-        </button>
-      </div>
-      
-      <div className="lg:w-1/2 min-h-[300px] lg:min-h-[500px] 
+      <section className="bg-amber-50 py-12 px-4 md:py-24 md:px-8 font-sans">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
+            <div className="lg:w-1/2 flex flex-col justify-center">
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-gray-800 leading-tight">
+                Crafting the Future of Water Spaces
+              </h1>
+              <p className="text-base text-gray-700 mb-10 max-w-xl leading-relaxed">
+                We're enabling a new era of swimming pool infrastructure - where
+                design meets technology, and every solution is as functional as
+                it is visually transparent. Our digital catalogue brings this
+                vision to life: design-driven layouts, technically advanced
+                details and crystal-clear product presentation. From precision
+                specifications to stunning visuals, it's everything you need to
+                build with confidence, all in one place.
+              </p>
+              <button className="bg-sky-500 hover:bg-sky-600 text-white font-semibold py-3 px-6 rounded shadow-lg transition duration-300 w-fit">
+                Learn More About Us
+              </button>
+            </div>
+
+            <div
+              className="lg:w-1/2 min-h-[300px] lg:min-h-[500px] 
                       bg-gradient-to-br from-gray-200 to-sky-100 
-                      rounded-lg shadow-xl flex items-center justify-center p-8">
-        
-        <div className="text-center">
-          
-          <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-md border border-gray-100">
-            <svg className="w-10 h-10 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.404 10 4 8 4a2 2 0 00-2 2v2a2 2 0 002 2c.984 0 1.8.447 2.457 1.1l.942 1.1l.942-1.1C13.2 10.447 14.016 10 15 10a2 2 0 002-2V6a2 2 0 00-2-2c-2 0-2.832 1.404-3.832 2.253z" />
-            </svg>
-          </div>
-          
-          <p className="text-gray-700 font-semibold">
-            Excellence in Innovation
-          </p>
-          
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</section>
+                      rounded-lg shadow-xl flex items-center justify-center p-8"
+            >
+              <div className="text-center">
+                <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-md border border-gray-100">
+                  <svg
+                    className="w-10 h-10 text-sky-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 6.253v13m0-13C10.832 5.404 10 4 8 4a2 2 0 00-2 2v2a2 2 0 002 2c.984 0 1.8.447 2.457 1.1l.942 1.1l.942-1.1C13.2 10.447 14.016 10 15 10a2 2 0 002-2V6a2 2 0 00-2-2c-2 0-2.832 1.404-3.832 2.253z"
+                    />
+                  </svg>
+                </div>
 
-
-<section className="bg-amber-50 py-12 px-4 md:py-24 md:px-8 font-sans">
-  <div className="max-w-7xl mx-auto bg-slate-700 p-8 md:p-16 rounded-lg shadow-2xl">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-white text-center">
-      
-      <div>
-        <svg className="w-12 h-12 mb-4 stroke-current text-white mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
-          <path d="M17 13.5a5.5 5.5 0 00-11 0v4.5h11v-4.5z" />
-          <path d="M6 18H5a1 1 0 01-1-1v-1a1 1 0 011-1h1m11 2h1a1 1 0 001-1v-1a1 1 0 00-1-1h-1" />
-          <path d="M17 18h-10M6 18v2a1 1 0 001 1h10a1 1 0 001-1v-2M18 6L16 8M6 8L8 6" />
-          <path d="M12 4v16" />
-        </svg>
-        <p className="text-xl font-semibold leading-relaxed">
-          Installed in 12,000+ sites
-        </p>
-      </div>
-      
-      <div>
-        <svg className="w-12 h-12 mb-4 stroke-current text-white mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-        <p className="text-xl font-semibold leading-relaxed">
-          Exporting to 80+ countries
-        </p>
-      </div>
-      
-      <div>
-        <svg className="w-12 h-12 mb-4 stroke-current text-white mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h-1.586a1 1 0 01-.707-.293l-4.5-4.5a1 1 0 010-1.414l4.5-4.5a1 1 0 01.707-.293H17M4 12h8" />
-          <circle cx="9" cy="7" r="4" />
-          <circle cx="15" cy="17" r="4" />
-        </svg>
-        <p className="text-xl font-semibold leading-relaxed">
-          100+ worldwide distributors
-        </p>
-      </div>
-      
-    </div>
-  </div>
-</section>
-
-<section className="bg-amber-50 py-12 px-4 md:py-24 md:px-8 font-sans">
-  <div className="max-w-7xl mx-auto">
-    <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
-      
-      <div className="lg:w-1/2 flex flex-col justify-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-slate-700 leading-tight">
-          Clients Success Stories
-        </h1>
-        <p className="text-base text-gray-700 max-w-xl leading-relaxed">
-          Manufactured with care, trusted by professionals across 
-          every stage of the project. From blueprint to build, our 
-          partners rely on us for precision, performance, and 
-          peace of mind.
-        </p>
-      </div>
-      
-      <div className="lg:w-1/2 min-h-[300px] lg:min-h-[400px]">
-        <div className="h-full rounded-xl shadow-xl overflow-hidden">
-          <div className="w-full h-full bg-cover bg-center" 
-               style={{ 
-                 backgroundImage: `url('https://via.placeholder.com/800x400?text=Client+Success+Story+Image')`, 
-                 filter: 'grayscale(10%) brightness(1.05)',
-                 backgroundColor: '#cdd3d8'
-               }}>
+                <p className="text-gray-700 font-semibold">
+                  Excellence in Innovation
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      
-    </div>
-  </div>
-</section>
+      </section>
 
-<section className="bg-amber-50 py-12 px-4 md:py-24 md:px-8 font-sans">
-  {/* The entire area will be a solid blue color */}
-</section>
+      <section className="bg-amber-50 py-12 px-4 md:py-24 md:px-8 font-sans">
+        <div className="max-w-7xl mx-auto bg-slate-700 p-8 md:p-16 rounded-lg shadow-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-white text-center">
+            <div>
+              <svg
+                className="w-12 h-12 mb-4 stroke-current text-white mx-auto"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="1"
+              >
+                <path d="M17 13.5a5.5 5.5 0 00-11 0v4.5h11v-4.5z" />
+                <path d="M6 18H5a1 1 0 01-1-1v-1a1 1 0 011-1h1m11 2h1a1 1 0 001-1v-1a1 1 0 00-1-1h-1" />
+                <path d="M17 18h-10M6 18v2a1 1 0 001 1h10a1 1 0 001-1v-2M18 6L16 8M6 8L8 6" />
+                <path d="M12 4v16" />
+              </svg>
+              <p className="text-xl font-semibold leading-relaxed">
+                Installed in 12,000+ sites
+              </p>
+            </div>
 
+            <div>
+              <svg
+                className="w-12 h-12 mb-4 stroke-current text-white mx-auto"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="1"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
+              <p className="text-xl font-semibold leading-relaxed">
+                Exporting to 80+ countries
+              </p>
+            </div>
+
+            <div>
+              <svg
+                className="w-12 h-12 mb-4 stroke-current text-white mx-auto"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="1"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 20h-1.586a1 1 0 01-.707-.293l-4.5-4.5a1 1 0 010-1.414l4.5-4.5a1 1 0 01.707-.293H17M4 12h8"
+                />
+                <circle cx="9" cy="7" r="4" />
+                <circle cx="15" cy="17" r="4" />
+              </svg>
+              <p className="text-xl font-semibold leading-relaxed">
+                100+ worldwide distributors
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-amber-50 py-12 px-4 md:py-24 md:px-8 font-sans">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
+            <div className="lg:w-1/2 flex flex-col justify-center">
+              <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-slate-700 leading-tight">
+                Clients Success Stories
+              </h1>
+              <p className="text-base text-gray-700 max-w-xl leading-relaxed">
+                Manufactured with care, trusted by professionals across every
+                stage of the project. From blueprint to build, our partners rely
+                on us for precision, performance, and peace of mind.
+              </p>
+            </div>
+
+            <div className="lg:w-1/2 min-h-[300px] lg:min-h-[400px]">
+              <div className="h-full rounded-xl shadow-xl overflow-hidden">
+                <div
+                  className="w-full h-full bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url('https://via.placeholder.com/800x400?text=Client+Success+Story+Image')`,
+                    filter: "grayscale(10%) brightness(1.05)",
+                    backgroundColor: "#cdd3d8",
+                  }}
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-amber-50 py-12 px-4 md:py-24 md:px-8 font-sans">
+        {/* The entire area will be a solid blue color */}
+      </section>
     </>
   );
 };
