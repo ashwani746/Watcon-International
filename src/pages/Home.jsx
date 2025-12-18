@@ -253,9 +253,14 @@ const Home = () => {
             </div>
 
             <div
-              className="lg:w-1/2 min-h-[300px] lg:min-h-[500px] 
-                      bg-gradient-to-br from-gray-200 to-sky-100 
-                      rounded-lg shadow-xl flex items-center justify-center p-8"
+              className="lg:w-1/2 min-h-[300px] lg:min-h-[500px]
+             bg-gradient-to-br
+             from-gray-200
+             via-sky-200
+             via-blue-200
+             via-indigo-200
+             to-purple-200
+             rounded-lg shadow-xl flex items-center justify-center p-8"
             >
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-4 bg-white rounded-full flex items-center justify-center shadow-md border border-gray-100">
