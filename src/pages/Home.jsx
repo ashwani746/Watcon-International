@@ -12,13 +12,13 @@ const Home = () => {
 
   const products1 = [
     {
-      image: "/path-to-filter-image.jpg",
+      image: "https://media.istockphoto.com/id/1550110756/photo/luxury-patio-with-a-pool-at-night.jpg?s=612x612&w=0&k=20&c=vy3McsRjNNmW_cKhZPF1mM0scSn3cPS-1jhs_x3pJ2w=",
       title: "NN-FC-TMIX SERIES Filtration Combo",
       description:
         "Designed for easy setup of domestic pools, the NN-FC-TMIX SERIES Filtration Combo offers the ideal solution for home users seeking user-friendly operation and excellent filtration performance.",
     },
     {
-      image: "/path-to-pump-image.jpg",
+      image: "https://media.istockphoto.com/id/1452855533/photo/a-luxury-swimming-pool-with-lighting-in-night.jpg?s=612x612&w=0&k=20&c=AxNHN_vt_hjEoAfrIBxCe7xQn9iyiBldS_tHdgzRWOs=",
       title: "NN-VSP-PP Variable-Speed Pumps",
       description:
         "NN-VSP-PP variable-speed pumps continuously adjust their water flow to match real-time system demand. This intelligent modulation not only optimizes energy use but also enhances the overall efficiency of plant operations.",

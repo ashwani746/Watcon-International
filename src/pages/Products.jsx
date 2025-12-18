@@ -8,18 +8,20 @@ const Products = () => {
       id: 1,
       name: "Pool Light - Blue LED",
       image:
-"https://media.istockphoto.com/id/1550110756/photo/luxury-patio-with-a-pool-at-night.jpg?s=612x612&w=0&k=20&c=vy3McsRjNNmW_cKhZPF1mM0scSn3cPS-1jhs_x3pJ2w=" ,
-   },
+        "https://media.istockphoto.com/id/1550110756/photo/luxury-patio-with-a-pool-at-night.jpg?s=612x612&w=0&k=20&c=vy3McsRjNNmW_cKhZPF1mM0scSn3cPS-1jhs_x3pJ2w=",
+    },
     {
       id: 2,
       name: "Pool Light - RGB Color",
       image:
-"https://media.istockphoto.com/id/1204560807/photo/led-light-application-for-swimming-pool-underwater-lighting.jpg?s=612x612&w=0&k=20&c=vAXvVUS-9tsR5O_seQwruJjZeBIwik6xMsodZZAZt1Y=",    },
+        "https://media.istockphoto.com/id/1204560807/photo/led-light-application-for-swimming-pool-underwater-lighting.jpg?s=612x612&w=0&k=20&c=vAXvVUS-9tsR5O_seQwruJjZeBIwik6xMsodZZAZt1Y=",
+    },
     {
       id: 3,
       name: "Pool Light - Underwater",
       image:
-"https://media.istockphoto.com/id/1452855533/photo/a-luxury-swimming-pool-with-lighting-in-night.jpg?s=612x612&w=0&k=20&c=AxNHN_vt_hjEoAfrIBxCe7xQn9iyiBldS_tHdgzRWOs=",   },
+        "https://media.istockphoto.com/id/1452855533/photo/a-luxury-swimming-pool-with-lighting-in-night.jpg?s=612x612&w=0&k=20&c=AxNHN_vt_hjEoAfrIBxCe7xQn9iyiBldS_tHdgzRWOs=",
+    },
     {
       id: 4,
       name: "Pool Light - Floating",
