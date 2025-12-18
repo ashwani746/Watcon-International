@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 
 const Home = () => {
   const products = [
@@ -33,6 +35,54 @@ const Home = () => {
         "The Radial Flow Gas Pump is a high-performance air-moving solution, also known as a ring blower, designed to deliver consistent high-pressure airflow for demanding industrial applications.",
     },
   ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const stories = [
+    {
+      name: "Sarah Mitchell",
+      role: "CEO, TechVision Inc",
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      story:
+        "Working with this team transformed our business completely. Revenue increased by 300% in just 6 months, and our customer satisfaction scores have never been higher.",
+      rating: 5,
+      company: "TechVision Inc",
+      metric: "300% Revenue Growth",
+    },
+    {
+      name: "Michael Chen",
+      role: "Founder, GrowthLabs",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      story:
+        "The results exceeded all our expectations. Not only did we streamline our operations, but we also discovered new market opportunities we hadn't considered before.",
+      rating: 5,
+      company: "GrowthLabs",
+      metric: "50% Cost Reduction",
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Marketing Director, BrandPulse",
+      image:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      story:
+        "An absolute game-changer for our marketing efforts. The strategic insights and execution were flawless, leading to a massive boost in brand awareness and engagement.",
+      rating: 5,
+      company: "BrandPulse",
+      metric: "5x Engagement Increase",
+    },
+  ];
+
+  const nextStory = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % stories.length);
+  };
+
+  const prevStory = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + stories.length) % stories.length
+    );
+  };
 
   return (
     <>
@@ -371,16 +421,126 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="lg:w-1/2 min-h-[300px] lg:min-h-[400px]">
-              <div className="h-full rounded-xl shadow-xl overflow-hidden">
-                <div
-                  className="w-full h-full bg-cover bg-center"
-                  style={{
-                    backgroundImage: `url('https://via.placeholder.com/800x400?text=Client+Success+Story+Image')`,
-                    filter: "grayscale(10%) brightness(1.05)",
-                    backgroundColor: "#cdd3d8",
-                  }}
-                ></div>
+            <div className="w-full lg:w-1/2 min-h-[300px] lg:min-h-[400px] bg-gradient-to-br from-slate-50 to-slate-100 py-6 sm:py-8 px-3 sm:px-4">
+              <div className="max-w-4xl mx-auto h-full">
+                {/* Section Header */}
+                <div className="text-center mb-4 sm:mb-6">
+                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900">
+                    Client Success Stories
+                  </h2>
+                </div>
+
+                {/* Main Story Card */}
+                <div className="relative bg-white rounded-lg sm:rounded-xl shadow-xl overflow-hidden mb-4 sm:mb-6">
+                  <div className="absolute top-2 right-2 sm:top-3 sm:right-3 text-slate-200">
+                    <Quote
+                      size={30}
+                      strokeWidth={1}
+                      className="sm:w-10 sm:h-10"
+                    />
+                  </div>
+
+                  <div className="grid md:grid-cols-5 gap-3 sm:gap-4 p-3 sm:p-4 md:p-6">
+                    {/* Left Side - Client Info */}
+                    <div className="md:col-span-2 flex flex-col items-center text-center space-y-2 sm:space-y-3">
+                      <img
+                        src={stories[currentIndex].image}
+                        alt={stories[currentIndex].name}
+                        className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full object-cover border-2 border-slate-100 shadow-lg"
+                      />
+                      <div>
+                        <h3 className="text-sm sm:text-base md:text-lg font-bold text-slate-900">
+                          {stories[currentIndex].name}
+                        </h3>
+                        <p className="text-xs sm:text-sm text-slate-600 mt-0.5 sm:mt-1">
+                          {stories[currentIndex].role}
+                        </p>
+                        <p className="text-xs text-slate-500 mt-0.5 sm:mt-1">
+                          {stories[currentIndex].company}
+                        </p>
+                      </div>
+
+                      {/* Rating */}
+                      <div className="flex gap-0.5 sm:gap-1">
+                        {[...Array(stories[currentIndex].rating)].map(
+                          (_, i) => (
+                            <Star
+                              key={i}
+                              size={12}
+                              className="fill-amber-400 text-amber-400 sm:w-3.5 sm:h-3.5"
+                            />
+                          )
+                        )}
+                      </div>
+
+                      {/* Metric Badge */}
+                      <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full font-semibold text-xs">
+                        {stories[currentIndex].metric}
+                      </div>
+                    </div>
+
+                    {/* Right Side - Story */}
+                    <div className="md:col-span-3 flex flex-col justify-center mt-2 md:mt-0">
+                      <p className="text-xs sm:text-sm md:text-base text-slate-700 leading-relaxed italic">
+                        "{stories[currentIndex].story}"
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Navigation Buttons */}
+                  <div className="flex justify-center gap-2 pb-3 sm:pb-4">
+                    <button
+                      onClick={prevStory}
+                      className="bg-slate-900 text-white p-1.5 sm:p-2 rounded-full hover:bg-slate-700 transition-colors shadow-lg"
+                      aria-label="Previous story"
+                    >
+                      <ChevronLeft size={14} className="sm:w-4 sm:h-4" />
+                    </button>
+                    <button
+                      onClick={nextStory}
+                      className="bg-slate-900 text-white p-1.5 sm:p-2 rounded-full hover:bg-slate-700 transition-colors shadow-lg"
+                      aria-label="Next story"
+                    >
+                      <ChevronRight size={14} className="sm:w-4 sm:h-4" />
+                    </button>
+                  </div>
+
+                  {/* Dots Indicator */}
+                  <div className="flex justify-center gap-1.5 sm:gap-2 pb-3 sm:pb-4">
+                    {stories.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentIndex(index)}
+                        className={`h-1.5 sm:h-2 rounded-full transition-all ${
+                          index === currentIndex
+                            ? "bg-slate-900 w-5 sm:w-6"
+                            : "bg-slate-300 hover:bg-slate-400 w-1.5 sm:w-2"
+                        }`}
+                        aria-label={`Go to story ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                  <div className="bg-white rounded-lg p-3 sm:p-4 text-center shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-600 mb-1">
+                      150+
+                    </div>
+                    <div className="text-slate-600 text-xs sm:text-sm">
+                      Happy Clients
+                    </div>
+                  </div>
+                  <div className="bg-white rounded-lg p-3 sm:p-4 text-center shadow-lg hover:shadow-xl transition-shadow">
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-purple-600 mb-1">
+                      98%
+                    </div>
+                    <div className="text-slate-600 text-xs sm:text-sm">
+                      Satisfaction Rate
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
