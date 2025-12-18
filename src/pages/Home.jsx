@@ -4,6 +4,8 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 
 const Home = () => {
+const text = "Aquatic Infrastructure";
+
   const products = [
     { name: "Filtration", icon: "🔄" },
     { name: "Pumps", icon: "⚙️" },
@@ -120,24 +122,41 @@ const Home = () => {
 
         {/* Hero Content */}
         <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-8 pt-20 pb-32">
-          <motion.h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white text-center mb-6 leading-tight">
-            Engineering the Future of
-            <br />
-            <motion.span
-              animate={{
-                color: ["#ffffff", "#60a5fa", "#ffffff"], // Shimmers from white to blue back to white
-                scale: [1, 1.02, 1],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              className="inline-block"
-            >
-              Aquatic Infrastructure
-            </motion.span>
-          </motion.h1>
+          
+<motion.h1
+  className="
+    text-3xl sm:text-4xl md:text-5xl lg:text-7xl
+    font-bold text-white text-center
+    mb-4 sm:mb-6 leading-snug sm:leading-tight
+  "
+>
+  Engineering the Future of
+  <br />
+
+  <span className="inline-block">
+    {text.split("").map((char, index) => (
+      <motion.span
+        key={index}
+        initial={{ opacity: 0, y: 6 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          color: ["#ffffff", "#60a5fa", "#ffffff"],
+        }}
+        transition={{
+          delay: index * 0.06,   // faster on mobile
+          duration: 1,
+          repeat: Infinity,
+          repeatDelay: 3,
+          ease: "easeInOut",
+        }}
+        className="inline-block"
+      >
+        {char === " " ? "\u00A0" : char}
+      </motion.span>
+    ))}
+  </span>
+</motion.h1>
 
           <p className="text-white/90 text-center max-w-4xl text-lg md:text-xl mb-12 leading-relaxed">
             From Olympic-sized pools to wellness retreats, Noble Nautica
