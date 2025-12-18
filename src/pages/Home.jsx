@@ -12,19 +12,22 @@ const Home = () => {
 
   const products1 = [
     {
-      image: "https://media.istockphoto.com/id/1550110756/photo/luxury-patio-with-a-pool-at-night.jpg?s=612x612&w=0&k=20&c=vy3McsRjNNmW_cKhZPF1mM0scSn3cPS-1jhs_x3pJ2w=",
+      image:
+        "https://media.istockphoto.com/id/1550110756/photo/luxury-patio-with-a-pool-at-night.jpg?s=612x612&w=0&k=20&c=vy3McsRjNNmW_cKhZPF1mM0scSn3cPS-1jhs_x3pJ2w=",
       title: "NN-FC-TMIX SERIES Filtration Combo",
       description:
         "Designed for easy setup of domestic pools, the NN-FC-TMIX SERIES Filtration Combo offers the ideal solution for home users seeking user-friendly operation and excellent filtration performance.",
     },
     {
-      image: "https://media.istockphoto.com/id/1452855533/photo/a-luxury-swimming-pool-with-lighting-in-night.jpg?s=612x612&w=0&k=20&c=AxNHN_vt_hjEoAfrIBxCe7xQn9iyiBldS_tHdgzRWOs=",
+      image:
+        "https://media.istockphoto.com/id/1452855533/photo/a-luxury-swimming-pool-with-lighting-in-night.jpg?s=612x612&w=0&k=20&c=AxNHN_vt_hjEoAfrIBxCe7xQn9iyiBldS_tHdgzRWOs=",
       title: "NN-VSP-PP Variable-Speed Pumps",
       description:
         "NN-VSP-PP variable-speed pumps continuously adjust their water flow to match real-time system demand. This intelligent modulation not only optimizes energy use but also enhances the overall efficiency of plant operations.",
     },
     {
-      image: "/path-to-blower-image.jpg",
+      image:
+        "https://media.istockphoto.com/id/1204560807/photo/led-light-application-for-swimming-pool-underwater-lighting.jpg?s=612x612&w=0&k=20&c=vAXvVUS-9tsR5O_seQwruJjZeBIwik6xMsodZZAZt1Y=",
       title: "Radial Flow Gas Pump",
       description:
         "The Radial Flow Gas Pump is a high-performance air-moving solution, also known as a ring blower, designed to deliver consistent high-pressure airflow for demanding industrial applications.",
@@ -180,32 +183,46 @@ const Home = () => {
             <div className="lg:w-1/2 bg-gray-200 p-4 rounded-lg shadow-lg">
               <div className="grid grid-cols-2 gap-4 h-full">
                 <div className="col-span-1 h-48 sm:h-64">
-                  <div className="bg-gray-800 flex items-center justify-center p-2 rounded-sm h-full">
-                    <span className="text-white text-[10px] sm:text-xs text-center leading-tight opacity-70">
-                      PRODUCT CATALOGUE Cover
-                    </span>
+                  <div className="bg-gray-800 flex items-center justify-center rounded-sm h-full overflow-hidden shadow-md">
+                    <img
+                      src="https://media.istockphoto.com/id/1151832961/photo/evening-view-of-a-modern-large-house-with-swimming-pool.jpg?s=612x612&w=0&k=20&c=1CP0id1zUGmhmAooj03ocSBipihju7CjCmmGs_LPwhA="
+                      alt="Product Catalogue Cover - Modern House"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 <div className="col-span-1 h-48 sm:h-64">
                   <div className="bg-gray-800 flex items-center justify-center p-2 rounded-sm h-full">
-                    <span className="text-white text-[10px] sm:text-xs text-center leading-tight opacity-70">
-                      Catalogue Spread
-                    </span>
+                    <div className="bg-gray-800 flex items-center justify-center rounded-sm h-full overflow-hidden shadow-md">
+                      <img
+                        src="https://media.istockphoto.com/id/1151832961/photo/evening-view-of-a-modern-large-house-with-swimming-pool.jpg?s=612x612&w=0&k=20&c=1CP0id1zUGmhmAooj03ocSBipihju7CjCmmGs_LPwhA="
+                        alt="Product Catalogue Cover - Modern House"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
 
                 <div className="col-span-1 h-36 sm:h-48">
                   <div className="bg-gray-800 flex items-center justify-center p-2 rounded-sm h-full">
-                    <span className="text-white text-[10px] sm:text-xs text-center leading-tight opacity-70">
-                      Spec Sheet/Detail View
-                    </span>
+                    <div className="bg-gray-800 flex items-center justify-center rounded-sm h-full overflow-hidden shadow-md">
+                      <img
+                        src="https://media.istockphoto.com/id/1151832961/photo/evening-view-of-a-modern-large-house-with-swimming-pool.jpg?s=612x612&w=0&k=20&c=1CP0id1zUGmhmAooj03ocSBipihju7CjCmmGs_LPwhA="
+                        alt="Product Catalogue Cover - Modern House"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="col-span-1 h-36 sm:h-48">
                   <div className="bg-gray-800 flex items-center justify-center p-2 rounded-sm h-full">
-                    <span className="text-white text-[10px] sm:text-xs text-center leading-tight opacity-70">
-                      Product Cover V2
-                    </span>
+                    <div className="bg-gray-800 flex items-center justify-center rounded-sm h-full overflow-hidden shadow-md">
+                      <img
+                        src="https://media.istockphoto.com/id/1151832961/photo/evening-view-of-a-modern-large-house-with-swimming-pool.jpg?s=612x612&w=0&k=20&c=1CP0id1zUGmhmAooj03ocSBipihju7CjCmmGs_LPwhA="
+                        alt="Product Catalogue Cover - Modern House"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
