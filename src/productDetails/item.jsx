@@ -25,6 +25,7 @@ export default function Item() {
   ];
 
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
@@ -209,5 +210,10 @@ export default function Item() {
         </div>
       </div>
     </div>
+    
+     <section className="bg-amber-50 py-12 px-4 md:py-24 md:px-8 font-sans">
+      {/* The entire area will be a solid blue color */}
+    </section>
+    </>
   );
 }

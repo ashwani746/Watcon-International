@@ -67,6 +67,11 @@ const Products = () => {
 
         </div>
       </div>
+
+       <section className="bg-amber-50 py-12 px-4 md:py-24 md:px-8 font-sans">
+      {/* The entire area will be a solid blue color */}
+    </section>
+    
     </>
   );
 };
